@@ -9,7 +9,7 @@ public class PlayerController : MonoBehaviour
 	public List<Transform> Tails;
 	
 	[Range(0, 3)]
-	public float BonesDistance;
+	public float TailDistance;
 
 	[Range (0, 8)]
 	public float Speed;
@@ -39,7 +39,7 @@ public class PlayerController : MonoBehaviour
 
 	private void MoveSnake (Vector3 newPosition)
 	{
-		float sqrDistance = BonesDistance * BonesDistance;
+		float sqrDistance = TailDistance * TailDistance;
 		Vector3 PreviousPosition = _transform.position;
 
 		foreach (var bone in Tails)
